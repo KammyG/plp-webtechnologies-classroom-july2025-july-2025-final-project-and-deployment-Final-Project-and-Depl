@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites - Grandeur Resort</title>
+    <meta name="description" content="Explore our luxury rooms and suites at Grandeur Resort. From ocean view suites to private villas, find your perfect accommodation in Malindi.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Grandeur Resort</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="rooms.html" class="nav-link active">Rooms</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Rooms & Suites</h1>
+            <p>Discover your perfect retreat</p>
+        </div>
+    </section>
+
+    <!-- Room Gallery -->
+    <section class="room-gallery">
+        <div class="container">
+            <div class="gallery-controls">
+                <button class="gallery-btn active" data-filter="all">All Rooms</button>
+                <button class="gallery-btn" data-filter="suite">Suites</button>
+                <button class="gallery-btn" data-filter="villa">Villas</button>
+                <button class="gallery-btn" data-filter="standard">Standard</button>
+            </div>
+            
+            <div class="rooms-gallery-grid">
+                <!-- Deluxe Ocean Suite -->
+                <div class="room-gallery-item" data-category="suite">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Deluxe Ocean Suite">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('deluxe-ocean')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Deluxe Ocean Suite</h3>
+                        <p>Breathtaking Indian Ocean views with premium amenities</p>
+                        <div class="room-features">
+                            <span>🛏️ King Bed</span>
+                            <span>🌊 Ocean View</span>
+                            <span>🛁 Luxury Bath</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$299</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garden Villa -->
+                <div class="room-gallery-item" data-category="villa">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Garden Villa">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('garden-villa')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Garden Villa</h3>
+                        <p>Private villa surrounded by tropical gardens</p>
+                        <div class="room-features">
+                            <span>🏡 Private Villa</span>
+                            <span>🌿 Garden View</span>
+                            <span>🏊‍♂️ Private Pool</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$199</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presidential Suite -->
+                <div class="room-gallery-item" data-category="suite">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Presidential Suite">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('presidential')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Presidential Suite</h3>
+                        <p>Ultimate luxury with panoramic ocean views</p>
+                        <div class="room-features">
+                            <span>👑 Presidential</span>
+                            <span>🌊 Ocean View</span>
+                            <span>🥂 Butler Service</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$499</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Room -->
+                <div class="room-gallery-item" data-category="standard">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Standard Room">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('standard')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Standard Room</h3>
+                        <p>Comfortable and elegant accommodations</p>
+                        <div class="room-features">
+                            <span>🛏️ Queen Bed</span>
+                            <span>📺 Smart TV</span>
+                            <span>☕ Coffee Maker</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$149</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Suite -->
+                <div class="room-gallery-item" data-category="suite">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Family Suite">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('family')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Family Suite</h3>
+                        <p>Spacious suite perfect for families</p>
+                        <div class="room-features">
+                            <span>👨‍👩‍👧‍👦 Family Friendly</span>
+                            <span>🛏️ 2 Bedrooms</span>
+                            <span>🍳 Kitchenette</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$349</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honeymoon Villa -->
+                <div class="room-gallery-item" data-category="villa">
+                    <div class="room-gallery-image">
+                        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" alt="Honeymoon Villa">
+                        <div class="room-overlay">
+                            <button class="view-details-btn" onclick="openRoomModal('honeymoon')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="room-gallery-info">
+                        <h3>Honeymoon Villa</h3>
+                        <p>Romantic villa with private beach access</p>
+                        <div class="room-features">
+                            <span>💕 Romantic</span>
+                            <span>🏖️ Beach Access</span>
+                            <span>🛁 Jacuzzi</span>
+                        </div>
+                        <div class="room-pricing">
+                            <span class="price">$399</span>
+                            <span class="per-night">/night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Modal -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Room details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grandeur Resort</h3>
+                    <p>123 Baobab Beach Road<br>Malindi, 80200, Kenya</p>
+                    <p>Phone: +254 712 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grandeur Resort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+</body>
+</html>

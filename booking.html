@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Grandeur Resort</title>
+    <meta name="description" content="Book your luxury accommodation at Grandeur Resort in Malindi. Easy online booking with instant confirmation.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Grandeur Resort</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li><a href="booking.html" class="nav-link active">Book Now</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <p>Reserve your perfect getaway</p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <h2>Reservation Details</h2>
+                    <form id="bookingForm" class="booking-form">
+                        <!-- Guest Information -->
+                        <div class="form-section">
+                            <h3>Guest Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Booking Details -->
+                        <div class="form-section">
+                            <h3>Booking Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkIn">Check-in Date *</label>
+                                    <input type="date" id="checkIn" name="checkIn" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkOut">Check-out Date *</label>
+                                    <input type="date" id="checkOut" name="checkOut" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="roomType">Room Type *</label>
+                                    <select id="roomType" name="roomType" required>
+                                        <option value="">Select Room Type</option>
+                                        <option value="standard" data-price="149">Standard Room - $149/night</option>
+                                        <option value="garden-villa" data-price="199">Garden Villa - $199/night</option>
+                                        <option value="deluxe-ocean" data-price="299">Deluxe Ocean Suite - $299/night</option>
+                                        <option value="family" data-price="349">Family Suite - $349/night</option>
+                                        <option value="honeymoon" data-price="399">Honeymoon Villa - $399/night</option>
+                                        <option value="presidential" data-price="499">Presidential Suite - $499/night</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guests">Number of Guests</label>
+                                    <select id="guests" name="guests">
+                                        <option value="1">1 Guest</option>
+                                        <option value="2" selected>2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5+ Guests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-section">
+                            <h3>Special Requests</h3>
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests or Notes</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests, dietary requirements, or accessibility needs..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Add-ons -->
+                        <div class="form-section">
+                            <h3>Add-ons & Services</h3>
+                            <div class="addons-grid">
+                                <div class="addon-item">
+                                    <input type="checkbox" id="breakfast" name="addons" value="breakfast">
+                                    <label for="breakfast">
+                                        <span class="addon-name">Continental Breakfast</span>
+                                        <span class="addon-price">+$25/day</span>
+                                    </label>
+                                </div>
+                                <div class="addon-item">
+                                    <input type="checkbox" id="spa" name="addons" value="spa">
+                                    <label for="spa">
+                                        <span class="addon-name">Spa Package</span>
+                                        <span class="addon-price">+$150/stay</span>
+                                    </label>
+                                </div>
+                                <div class="addon-item">
+                                    <input type="checkbox" id="transport" name="addons" value="transport">
+                                    <label for="transport">
+                                        <span class="addon-name">Airport Transfer</span>
+                                        <span class="addon-price">+$75/way</span>
+                                    </label>
+                                </div>
+                                <div class="addon-item">
+                                    <input type="checkbox" id="late-checkout" name="addons" value="late-checkout">
+                                    <label for="late-checkout">
+                                        <span class="addon-name">Late Checkout</span>
+                                        <span class="addon-price">+$50</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Complete Booking</button>
+                    </form>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <span>Room Type:</span>
+                            <span id="summaryRoomType">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Check-in:</span>
+                            <span id="summaryCheckIn">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Check-out:</span>
+                            <span id="summaryCheckOut">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Nights:</span>
+                            <span id="summaryNights">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Guests:</span>
+                            <span id="summaryGuests">2</span>
+                        </div>
+                        <hr>
+                        <div class="summary-item">
+                            <span>Room Total:</span>
+                            <span id="summaryRoomTotal">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Add-ons:</span>
+                            <span id="summaryAddons">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Taxes & Fees:</span>
+                            <span id="summaryTaxes">$0</span>
+                        </div>
+                        <hr>
+                        <div class="summary-item total">
+                            <span><strong>Total:</strong></span>
+                            <span id="summaryTotal"><strong>$0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grandeur Resort</h3>
+                    <p>123 Baobab Beach Road<br>Malindi, 80200, Kenya</p>
+                    <p>Phone: +254 712 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grandeur Resort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
